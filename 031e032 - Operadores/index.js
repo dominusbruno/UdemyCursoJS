@@ -16,8 +16,8 @@ OPERADORES DE COMPARAÇÃO
 
 OPERADORES DE LÓGICOS
 
-&&      E
-||      OU
-!       NÃO
+&&      E       (AND)
+||      OU      (OR)
+!       NÃO     (NOT)
 
 */
