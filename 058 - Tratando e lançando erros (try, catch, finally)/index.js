@@ -13,7 +13,7 @@
 
 
 
-//#################################################33333
+//#################################################
 
 function retornaHora(data) {
     if (data && !(data instanceof Date)){
@@ -23,7 +23,8 @@ function retornaHora(data) {
     if (!data){
         data = new Date();
     }
-
+    
+    // RETORNO DO DADO INSERIDO NA FUNÇÃO
     return data.toLocaleTimeString('pt-BR',{
         hour: '2-digit',
         minute: '2-digit',
