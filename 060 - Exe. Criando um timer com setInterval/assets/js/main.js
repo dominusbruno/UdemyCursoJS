@@ -2,17 +2,19 @@
 function criaHoraDosSegundos(segundos){
     let data = new Date(segundos * 1000) //Multiplicamos por 1000 pois o horário é em milisegundos
     return data.toLocaleTimeString('pt-BR', {
-        hour12: false,
+        hour12: false, //Coloca as horas em formato 24H
         timeZone: 'UTC',
     })
 }
 
-//SELECIONAR TODAS AS CLASSES
+//SELECIONAR E ATRIBUI CONSTANTES A TODAS AS CLASSES DO HTML QUE SERÃO UTILIZADAS NESTE PROJETO
 const relogio = document.querySelector('.relogio');
 const iniciar = document.querySelector('.iniciar');
 const pausar = document.querySelector('.pausar');
 const zerar = document.querySelector('.zerar');
+//Variável que guardará os segundos
 let segundos = 0;
+//Variável que guardará o "timer" completo
 let timer;
 
 function iniciaRelogio(){
@@ -22,7 +24,7 @@ function iniciaRelogio(){
     }, 1000)
 }
 
-//Evento que inicia o cronometro/timer
+//Função que inicia o cronometro/timer
 iniciar.addEventListener('click', function (event) {
     relogio.classList.remove('pausado');
     clearInterval(timer);    
